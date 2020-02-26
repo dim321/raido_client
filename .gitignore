@@ -6,6 +6,7 @@
 /pkg/
 /spec/reports/
 /tmp/
+raido_scenario.rb
 
 # rspec failure tracking
 .rspec_status
