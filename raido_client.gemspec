@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "raido_client/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "raido_client"
+  spec.name          = "raido-client"
   spec.version       = RaidoClient::VERSION
   spec.authors       = ["Dmitry Kravchenko"]
   spec.email         = ["tunturidim@gmail.com"]
