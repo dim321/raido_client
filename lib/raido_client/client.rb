@@ -10,7 +10,7 @@ module RaidoClient
     format :json
 
     def initialize(partner_api_key = nil)
-      @partner_api_key ||= ENV["RAIDO_API_KEY"]
+      @partner_api_key = partner_api_key || ENV["RAIDO_API_KEY"]
     end
 
   end
