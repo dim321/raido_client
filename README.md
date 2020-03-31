@@ -22,24 +22,24 @@ Or install it yourself as:
 
 First of all, initialize client:
 
-client = RaidoClient::ClientAPI.new("RAIDO_PARTNER_API_TOKEN")
+    $ client = RaidoClient::ClientAPI.new("RAIDO_PARTNER_API_TOKEN")
 
 And then talk to API:
 
-client.get_partner_info
+    $ client.get_partner_info
 
 Add Partner transaction method:
 
-fiat_to_eth = {
-  "in_currency_id":   "5",
-  "out_currency_id":  "2",
-  "volume":           "400",
-  "wallet":           "32dmJ9g1ity8cihrXXXXX8uZivXkcDWCvS",
-  "notification_url": "http://wallet.lvh.me",
-  "return_url":       "http://wallet.lvh.me"
-}
+    $ fiat_to_eth = {
+    $                "in_currency_id":   "5",
+    $                "out_currency_id":  "2",
+    $                "volume":           "400",
+    $                "wallet":           "32dmJ9g1ity8cihrXXXXX8uZivXkcDWCvS",
+    $                "notification_url": "http://wallet.lvh.me",
+    $                "return_url":       "http://wallet.lvh.me"
+    $               }
 
-client.add_partner_transaction(fiat_to_eth)
+    $ client.add_partner_transaction(fiat_to_eth)
 
 For more information, please consult the <a href="https://merchant-datacenter.raidofinance.eu/api/#api-Partner">Raido Merchant API official documentation</a>
 
