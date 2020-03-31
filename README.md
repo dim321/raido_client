@@ -1,8 +1,6 @@
-# RaidoClient
+# Raido Merchant API v1.0.0 Ruby wrapper.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/raido_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby gem which helps to communicate with Raido Merchant API v.1.0.0.
 
 ## Installation
 
@@ -22,7 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First of all, initialize client:
+
+client = RaidoClient::ClientAPI.new("RAIDO_PARTNER_API_TOKEN")
+
+And then talk to API:
+
+client.get_partner_info
+
+Add Partner transaction method:
+
+fiat_to_eth = {
+  "in_currency_id":   "5",
+  "out_currency_id":  "2",
+  "volume":           "400",
+  "wallet":           "32dmJ9g1ity8cihrXXXXX8uZivXkcDWCvS",
+  "notification_url": "http://wallet.lvh.me",
+  "return_url":       "http://wallet.lvh.me"
+}
+
+client.add_partner_transaction(fiat_to_eth)
+
+For more information, please consult the <a href="https://merchant-datacenter.raidofinance.eu/api/#api-Partner">Raido Merchant API official documentation</a>
 
 ## Development
 
