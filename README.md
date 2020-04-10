@@ -1,6 +1,6 @@
 # Raido Merchant API v1.0.0 Ruby wrapper.
 
-A Ruby gem which helps to communicate with Raido Merchant API v.1.0.0.
+A Ruby gem which helps to communicate with <a href="https://merchant-datacenter.raidofinance.eu/api/#api-Partner"> Raido Merchant API v.1.0.0.</a> <a href="https://raidofinance.eu/">Raido Finance</a> is a market exchange site serving those trading with crypto currencies, such as Bitcoin, Ethereum, support purchase/sale of cryptocurrency using bank cards and bank transfers in Euros through SEPA.
 
 ## Installation
 
@@ -17,6 +17,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install raido_client
+
+And require it in your controller:
+
+```ruby
+  require 'raido_client'
+```
 
 ## Usage
 
