@@ -2,12 +2,14 @@ module RaidoClient
   class ClientAPI
     module Partner
 
+      # Возвращает итоговую сумму без учета комиссий банка и Райдо
       def add_partner_transaction(options = {})
         post("/partners/transactions/#{@partner_api_key}", options)
       end
 
-      def add_partner(options = {})
-        post("/partners", options)
+      # Возвращает итоговую сумму с учетом комиссий банка и Райдо
+      def add_partner_transaction_calc(options = {})
+        post("/partners/transactions/calc/#{@partner_api_key}", options)
       end
 
       def add_user_phone_for_tx(options = {})
@@ -28,18 +30,6 @@ module RaidoClient
 
       def get_partner_transaction(options = {})
         get("/partners/transactions/#{@partner_api_key}", options)
-      end
-
-      def get_partners_list
-        get("/partners")
-      end
-
-      def login_user_for_partner_tx(options = {})
-        post("/partners/login/#{@partner_api_key}", options)
-      end
-
-      def update_partner_info(options = {})
-        put("/partners/#{@partner_api_key}", options)
       end
 
     end
