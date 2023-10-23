@@ -47,4 +47,4 @@ Add Partner transaction method:
 
     $ client.add_partner_transaction(fiat_to_eth)
 
-For more information, please consult the <a href="https://merchant-datacenter.raidofinance.eu/api/#api-Partner">Raido Merchant API official documentation</a>
+For more information, please visit the <a href="https://merchant-datacenter.raidofinance.eu/api/#api-Partner">Raido Merchant API official documentation</a>
